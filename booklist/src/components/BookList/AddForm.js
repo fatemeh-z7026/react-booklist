@@ -6,6 +6,8 @@ export default class AddForm extends Component {
   constructor() {
     super();
 
+    // Create a reference for the title input field
+    this.titleInputRef = React.createRef();
     this.state = {
       books: [],
 
@@ -50,6 +52,8 @@ export default class AddForm extends Component {
         author: "",
         year: "",
       }));
+      // After submitting, focus back on the title input field
+      this.titleInputRef.current.focus();
     }
   }
 
@@ -67,6 +71,7 @@ export default class AddForm extends Component {
               type="text"
               id="title"
               className="form-control"
+              ref={this.titleInputRef}
               value={this.state.title}
               onChange={(event) => {
                 this.titleHandler(event);
