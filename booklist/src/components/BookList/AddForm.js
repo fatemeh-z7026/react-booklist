@@ -46,7 +46,9 @@ export default class AddForm extends Component {
 
       this.setState({
         books: newBook,
-       
+        title: "",
+        author: "",
+        year: "",
       });
     }
   }
@@ -65,6 +67,7 @@ export default class AddForm extends Component {
               type="text"
               id="title"
               className="form-control"
+              value={this.state.title}
               onChange={(event) => {
                 this.titleHandler(event);
               }}
@@ -77,6 +80,7 @@ export default class AddForm extends Component {
               type="text"
               id="author"
               className="form-control"
+              value={this.state.author}
               onChange={(event) => {
                 this.authorHandler(event);
               }}
@@ -89,6 +93,7 @@ export default class AddForm extends Component {
               type="text"
               id="year"
               className="form-control"
+              value={this.state.year}
               onChange={(event) => {
                 this.yearHandler(event);
               }}
