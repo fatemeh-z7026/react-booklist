@@ -44,12 +44,12 @@ export default class AddForm extends Component {
         year: this.state.year,
       };
 
-      this.setState({
-        books: newBook,
+      this.setState((prevState) => ({
+        books: [...prevState.books, newBook], // Append the new book to the books array
         title: "",
         author: "",
         year: "",
-      });
+      }));
     }
   }
 
@@ -114,7 +114,9 @@ export default class AddForm extends Component {
             </tr>
           </thead>
           <tbody id="book-list">
-            <Book />
+            {this.state.books.map((book) => (
+              <Book key={book.id} {...book} />
+            ))}
           </tbody>
         </table>
       </>
