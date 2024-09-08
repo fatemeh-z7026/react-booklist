@@ -10,12 +10,10 @@ h1.display-4 {
 
 
 h1.display-4 .text-warning {
-  color: #ff9800; /* Text with class 'text-warning' gets the orange color */
+  color: #bfda76; 
 }
 
-h1.display-4 span {
-  color: #ff9800; /* Ensure the 'Book' part is highlighted */
-}
+
 
 /* Ensure the entire page layout is centered and cohesive */
 .container h1 {

@@ -6,6 +6,15 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
+body {
+  background: rgb(231, 240, 220);
+  background: linear-gradient(
+    90deg,
+    rgba(231, 240, 220, 1) 40%,
+    rgba(241, 241, 241, 1) 58%
+  );
+}
 /* Minimal style for the form */
 #book-form {
   max-width: 400px; /* Adjust as needed */
@@ -45,7 +54,7 @@ html {
 }
 
 .btn-warning {
-  background-color: #f39c12;
+  background-color: #bfda76;
 }
 
 .btn-block {
