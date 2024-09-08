@@ -32,18 +32,25 @@ export default class AddForm extends Component {
 
   submitBook(event) {
     event.preventDefault();
+    const { title, author, year } = this.state; // store title, author, and year in variables
 
-    let newBook = {
-      id: this.state.books.length + 1,
-      title: this.state.title,
-      author: this.state.author,
-      year: this.state.year,
-    };
+    if (!title || !author || !year) {
+      alert("Please Fill All Fields");
+    } else {
+      let newBook = {
+        id: this.state.books.length + 1,
+        title: this.state.title,
+        author: this.state.author,
+        year: this.state.year,
+      };
 
-    this.setState({
-        books:newBook,
-    })
+      this.setState({
+        books: newBook,
+       
+      });
+    }
   }
+
   render() {
     return (
       <>
