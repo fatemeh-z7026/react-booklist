@@ -1,0 +1,23 @@
+/* Heading styling */
+h1.display-4 {
+  font-size: 2.5rem; /* Large font size for emphasis */
+  font-weight: bold;
+  text-align: center; /* Center the text */
+  margin-bottom: 10px; /* Add some spacing below the header */
+  color: #333; /* Neutral dark color */
+}
+
+
+
+h1.display-4 .text-warning {
+  color: #ff9800; /* Text with class 'text-warning' gets the orange color */
+}
+
+h1.display-4 span {
+  color: #ff9800; /* Ensure the 'Book' part is highlighted */
+}
+
+/* Ensure the entire page layout is centered and cohesive */
+.container h1 {
+  margin-bottom: 10px; /* More space below the heading */
+}
